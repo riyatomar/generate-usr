@@ -64,7 +64,7 @@ for sent in prune_output_list:
     split_sent=sent.split(",")
     wx_word=split_sent[1]
     #print(split_sent)
-    suffix=split_sent[5]
+    suffix=split_sent[6]
     suffix_dictionary[wx_word]=suffix
 
     
@@ -422,7 +422,7 @@ def get_row2():
                 #dependency=
         #main condition check begins here:
         
-        if pos_tag=="PSP"  or pos_tag=="SYM" or pos_tag=="CC":
+        if pos_tag=="PSP"  or pos_tag=="SYM" or pos_tag=="CC" or pos_tag=="RP":
             continue
         elif pos_tag=="VM" and word_info=="main": #Do not add suffix for these words because we have to do TAM search on them and it creates a problem later.
             #print("this is the word:",word)
